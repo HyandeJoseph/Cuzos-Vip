@@ -1,0 +1,522 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;   
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --bg-color: #fff;
+    --second-bg-color: #e6e5e5;
+    --text-color: #121212;
+    --second-color: #111;
+    --main: #ff5303;
+    --h2-font: 3rem;
+    --p-font: 20px;
+    --h1-font: 4rem;
+    --h4-font: 2rem;
+    --box-p-font: 1rem;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 22px 15%;
+    border-bottom: 1px solid transparent;
+    transition: all .45s ease;
+}
+.logo{
+    color: var(--main);
+    font-size: 40px;
+    font-weight: 600px;
+    letter-spacing: 2px;
+    margin-right: 300px;
+    text-decoration: none;
+}
+.navlist{
+    display: flex;
+}
+.navlist a{
+    color: var(--text-color);
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 25px;
+    transition: all .45s ease;
+}
+.navlist a:hover{
+    color: var(--main);
+    font-weight: 500;
+    transition: all .45s ease;
+} 
+.navlist a:active{
+    color: var(--main);
+}
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 30px;
+}
+header.sticky{ 
+    background: var(--bg-color);
+    border-bottom: 1rem solid var(--bg-color);
+    padding: 10px 15%;
+}
+span{
+    color: var(--main);
+}
+section{
+    padding: 160px 15% 120px;
+}
+
+.new{
+    color: var(--second-color);
+    font-size: 20px;   
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5rem;
+}
+.container h1{
+    color: var(--main);
+    margin: 10px 0 10px;
+    font-size: var(--h1-font);
+}
+.cars{
+    width: 100%;
+}
+.cars p{
+    color: var(--second-color);
+    font-size: var(--p-font);
+}
+
+.car1{
+    height: 500px;
+    width: 100%;
+    background: url('Screenshot_20230204-230918_Twitter.jpg');
+    background-size: cover;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+.btn a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    margin-right: 30px;
+    background: var(--main);
+    border: 2px solid var(--main);
+    border-radius: 10px 0 10px 0;
+    font-size: 25px;
+    font-weight: 300;
+    color: var(--bg-color);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+}
+.btn a:hover{
+    color: var(--text-color);
+}
+.btn a:nth-child(2){
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+}
+.btn a:nth-child(2):hover{
+    color: var(--main);
+}
+.about{ 
+    background: var(--second-bg-color);
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns:repeat(2,1fr);
+    gap: 2.5rem;
+}
+.cuzoimg img{
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+.about-text h2{
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+.about-text h4{
+    font-size: var(--h4-font);
+    font-weight: 600;
+    color: var(--second-color);
+    line-height: 1.7;
+    margin: 15px 0 15px;
+}
+.about-text p{
+    color: var(--text-color);
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.about-text a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background: var(--main);
+    border: 2px solid var(--main);
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 300;
+    color: var(--bg-color);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .4s;
+}
+.about-text a:hover{
+    color: var(--text-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 1rem var(--main);
+    transition: all .45s ease;
+}
+.main-text{
+    text-align: center;
+}
+.main-text h2{
+    font-size: var(--h2-font);
+    line-height: 1;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    align-items: center; 
+    gap: 2.5rem; 
+    margin-top: 3rem;
+}
+.box{
+    background: var(--second-bg-color);
+    padding: 35px 40px;
+    border-radius: 10px;
+    transition: al .45s ease;
+}
+.box h3{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.box p{
+    color: var(--text-color);
+    font-size: var(--box-p-font);
+}
+.box:hover{
+    transform: translateY(-8px);
+    cursor: pointer;
+    transition: all .45s ease;
+}
+.read{
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    background: var(--main);
+    color: var(--bg-color);
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+.read:hover{
+    letter-spacing: 0.5px;
+    background: #ff6017;
+    color: var(--text-color);
+}
+.contact{
+    background: var(--second-bg-color);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+.contact-us h2{
+    font-size: var(--h2-font);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.contact-us a{
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    line-height: 1.5;
+    transition: all .45s ease;
+}
+.contact-form form{
+    position: relative;
+}
+.contact-form form input, form textarea{
+    width: 100%;
+    padding: 14px;
+    background: var(--bg-color);
+    color: var(--second-color);
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.contact-form textarea{
+    resize: none;
+    height: 200px;
+}
+.contact-form .submit{
+    display: inline-block;
+    font-size: 16px;
+    background: var(--main);
+    color: var(--text-color);
+    width: 150px;
+    transition: all .45s ease;
+}
+.contact-form .submit:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 1rem var(--main-color);
+
+}
+.last{
+    text-align: center;
+}
+.last p{
+    font-size: 2rem;
+    color: var(--second-color);
+}
+@media (max-width: 1480px){
+    header{
+        padding: 20px 10%;
+        transition: .1s;
+    }
+    header.sticky{
+        padding: 12px 5%;
+        transition: .1s;
+    }
+    section{
+        padding: 140px 10% 80px;
+    }
+}
+@media (max-width: 1100px) {
+    :root{
+        --h2-font: 3rem;
+        --p-font: 18px;
+        --h1-font: 3rem;
+        --h4-font: 1.5rem;
+        --box-p-font: 1rem;
+    }
+    .navlist a{
+        color: var(--text-color);
+        font-size: 17px;
+        text-decoration: none;
+        margin-right: 20px;
+        transition: all .45s ease;
+    }
+    #menu-icon{
+        font-size: 35px;
+        color: var(--text-color);
+        z-index: 10001;
+        cursor: pointer;
+        margin-left: 18px;
+    }
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .about-img{
+        text-align: center;
+        order: 2;
+    }
+    .contact{
+        grid-template-columns: 1fr;
+    }
+    .btn a{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 46px;
+        margin-right: 30px;
+        background: var(--main);
+        border: 2px solid var(--main);
+        border-radius: 10px 0 10px 0;
+        font-size: 20px;
+        font-weight: 100;
+        transition: .4s;
+    }
+    .cuzoimg img{
+        width: 100%;
+        height: 500px;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+    }
+    .about-text a{
+        width: 150px;
+        height: 45px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: 200;
+        transition: .4s;
+    }
+
+
+}
+@media (max-width: 840px){
+    :root{
+        --h2-font: 2.7rem;
+        --p-font: 18px;
+        --h1-font: 2.7rem;
+        --h4-font: 1.2rem;
+        --box-p-font: 1rem;
+    }
+    header{
+        padding: 15px 3%;
+        transition: .1s;
+    }
+    header.sticky{
+        padding: 12px 5%;
+        transition: .1s;
+    }
+    .logo{
+        color: var(--main);
+        font-size: 35px;
+        font-weight: 600px;
+        letter-spacing: 2px;
+        margin-right: 30px;
+        text-decoration: none;
+    }
+    #menu-icon{
+        display: block;
+        font-size: 35px;
+        color: var(--text-color);
+        z-index: 10001;
+        cursor: pointer;
+    }
+    .navlist{
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        align-items: end;
+        transition: all .45s ease;
+    }
+    .navlist a{
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: var(--second-color);
+    }
+    .navlist a:hover{
+        color: var(--main);
+        letter-spacing: 1px;
+        font-weight: 500;
+        
+    }
+    .navlist a:active{
+        color: var(--main);
+    }
+    .navlist.open{
+        top: 100%;
+        height: calc(80vh);
+        padding: 20px 5%;
+    }
+    .container{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    
+    .car1{
+        height: 600px;
+        width: 100%;
+        background: url('Screenshot_20230204-230918_Twitter.jpg');
+        background-size: cover;
+        object-fit: cover;
+        border-radius: 30px;
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+    .btn a{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 98px;
+        height: 46px;
+        margin-right: 30px;
+        background: var(--main);
+        border: 2px solid var(--main);
+        border-radius: 10px 0 10px 0;
+        font-size: 15px;
+        transition: .4s;
+    }
+}
+@media (max-width: 430px){
+
+    :root{
+        --h2-font: 2rem;
+        --p-font: 18px;
+        --h1-font: 2.4rem;
+        --h4-font: 1.5rem;
+        --box-p-font: 1rem;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .car1{
+        height: 300px;
+        width: 100%;
+    }
+    .cuzoimg img{
+        width: 100%;
+        height: 300px;
+    }
+    .box h3{
+        font-size: 20px;
+    }
+    .about-text a{
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 500;
+        transition: .4s;
+    }
+
+    .last p{
+        font-size: 0.8rem;
+    }
+}
+
+
+
